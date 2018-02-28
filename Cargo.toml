@@ -1,0 +1,31 @@
+[package]
+name = "todo-demo"
+version = "0.1.0"
+authors = ["Dmitry Galinsky <dima.exe@gmail.com>"]
+
+[dependencies]
+env_logger = "0.5"
+log = "0.4"
+dotenv = "0.11"
+
+hyper = "0.11"
+futures = "0.1"
+futures-cpupool = "0.1"
+tokio-core = "0.1"
+tokio-service = { git = "https://github.com/tokio-rs/tokio-service" }
+
+serde = "1.0"
+serde_json = "1.0"
+serde_derive = "1.0"
+
+chrono = { version = "0.4", features = ["serde"] }
+
+diesel = { version = "1.1", features = ["chrono", "mysql"] }
+r2d2 = "0.8"
+r2d2-diesel = "1.0"
+
+url = "1.7"
+
+[dev-dependencies]
+spectral = "*"
+

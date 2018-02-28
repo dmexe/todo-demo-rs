@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+
+  mysql:
+    image: "mariadb:10.2"
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - "./var/mysql:/var/lib/mysql"
+

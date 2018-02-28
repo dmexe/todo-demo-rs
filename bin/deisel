@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+diesel --version 2> /dev/null || (
+  cargo install --force --no-default-features --features mysql diesel_cli
+)
+
+exec diesel $@
